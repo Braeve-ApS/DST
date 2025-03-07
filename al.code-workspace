@@ -7,5 +7,28 @@
       "path": ".AL-Go"
     }
   ],
-  "settings": {}
+  "settings": {
+    "launch": {
+      "version": "0.2.0",
+      "configurations": [
+        {
+          "name": "Sandbox_Collection",
+          "type": "al",
+          "request": "launch",
+          "environmentType": "Sandbox",
+          "environmentName": "Sandbox_Collection",
+          "startupObjectId": 22,
+          "breakOnError": "All",
+          "breakOnRecordWrite": "None",
+          "launchBrowser": true,
+          "enableSqlInformationDebugger": true,
+          "enableLongRunningSqlStatements": true,
+          "longRunningSqlStatementsThreshold": 500,
+          "numberOfSqlStatements": 10,
+          "tenant": "a4605de2-552a-43b7-aad7-cb7838a665dc"
+        }
+      ],
+      "compounds": []
+    }
+  }
 }

@@ -1,31 +1,67 @@
 {
-  "id": "e3101a1f-2e5b-40e6-8b23-6d17efc88ef7",
+  "id": "9a843256-bc66-4869-b887-3e3d4088ef63",
   "name": "DKS Custom Extension",
-  "publisher": "Braeve",
-  "version": "1.0.0.0",
-  "brief": "",
-  "description": "",
-  "privacyStatement": "",
-  "EULA": "",
-  "help": "",
-  "url": "",
-  "logo": "",
-  "dependencies": [],
-  "screenshots": [],
-  "platform": "1.0.0.0",
-  "application": "22.0.0.0",
+  "publisher": "TRIMIT DK A/S",
+  "version": "25.0.0.20",
+  "runtime": "13.1",
+  "target": "Cloud",
+  "application": "25.0.0.0",
+  "platform": "25.0.0.0",
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true,
+    "applyToDevExtension": false
+  },
+  "features": [
+    "TranslationFile"
+  ],
+  "dependencies": [
+    {
+      "id": "8d4eab29-8c7f-4b6c-be9a-b7fdfb9da196",
+      "name": "Continia Expense Management",
+      "version": "11.0.0.0",
+      "publisher": "Continia Software"
+    },
+    {
+      "id": "6da8dd2f-e698-461f-9147-8e404244dd85",
+      "name": "Continia Document Capture",
+      "version": "9.2.0.0",
+      "publisher": "Continia Software"
+    },
+    {
+      "id": "ac762be1-e90f-4a72-b519-612a5e3ddc2e",
+      "name": "OIOUBL",
+      "version": "23.0.0.0",
+      "publisher": "Microsoft"
+    },
+    {
+      "id": "644f7e5b-a81c-408a-aaa2-766e655a80a3",
+      "name": "Payment and Reconciliation Formats (DK)",
+      "version": "23.0.0.0",
+      "publisher": "Microsoft"
+    },
+    {
+      "id": "14340ba6-5934-4145-8e14-dbf1846fef80",
+      "name": "Continia Payment Management",
+      "version": "6.0.0.0",
+      "publisher": "Continia Software"
+    },
+    {
+      "id": "38987ff0-8eec-4232-b379-c7e35ae1b711",
+      "name": "Continia Collection Management (DK)",
+      "version": "24.0.0.0",
+      "publisher": "Continia Software"
+    }
+  ],
   "idRanges": [
     {
       "from": 50000,
+      "to": 69999
+    },
+    {
+      "from": 70005,
       "to": 70015
     }
-  ],
-  "features": [
-    "NoImplicitWith"
-  ],
-  "resourceExposurePolicy": {
-    "allowDebugging": true,
-    "allowDownloadingSource": false,
-    "includeSourceInSymbolFile": false
-  }
+  ]
 }

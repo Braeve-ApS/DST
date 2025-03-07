@@ -1,0 +1,74 @@
+codeunit 50005 "cor Insert Custom Reports"
+{
+    trigger OnRun()
+    var
+        CustomReportList_loc: Record "cor Custom Report List";
+    begin
+        CustomReportList_loc.DeleteAll();
+        CustomReportList_loc.No:=1;
+        CustomReportList_loc.Name:=TexReportingLbl;
+        CustomReportList_loc.ReportID:=50001;
+        CustomReportList_loc.Insert();
+        CustomReportList_loc.No:=2;
+        CustomReportList_loc.Name:=GeneralJournalTestLbl;
+        CustomReportList_loc.ReportID:=50005;
+        CustomReportList_loc.Insert();
+        CustomReportList_loc.No:=3;
+        CustomReportList_loc.Name:=DetailTrailBalanceLbl;
+        CustomReportList_loc.ReportID:=50010;
+        CustomReportList_loc.Insert();
+        CustomReportList_loc.No:=4;
+        CustomReportList_loc.Name:=PronesterInputLbl;
+        CustomReportList_loc.ReportID:=50014;
+        CustomReportList_loc.Insert();
+        CustomReportList_loc.No:=5;
+        CustomReportList_loc.Name:=TrialBalanceLbl;
+        CustomReportList_loc.ReportID:=50015;
+        CustomReportList_loc.Insert();
+        CustomReportList_loc.No:=6;
+        CustomReportList_loc.Name:=DSTRealAndExpectedExcelLbl;
+        CustomReportList_loc.ReportID:=50017;
+        CustomReportList_loc.Insert();
+        CustomReportList_loc.No:=7;
+        CustomReportList_loc.Name:=DSTRealAndExpectedVatXLLbl;
+        CustomReportList_loc.ReportID:=50018;
+        CustomReportList_loc.Insert();
+        CustomReportList_loc.No:=8;
+        CustomReportList_loc.Name:=SalesInvoiceLbl;
+        CustomReportList_loc.ReportID:=50020;
+        CustomReportList_loc.Insert();
+        CustomReportList_loc.No:=9;
+        CustomReportList_loc.Name:=SalesCreditMemoLbl;
+        CustomReportList_loc.ReportID:=50021;
+        CustomReportList_loc.Insert();
+        CustomReportList_loc.No:=10;
+        CustomReportList_loc.Name:=DKSBørnehuseneLbl;
+        CustomReportList_loc.ReportID:=50059;
+        CustomReportList_loc.Insert();
+        CustomReportList_loc.No:=11;
+        CustomReportList_loc.Name:=MaintainCustForGDPRLbl;
+        CustomReportList_loc.ReportID:=50060;
+        CustomReportList_loc.Insert();
+        CustomReportList_loc.No:=12;
+        CustomReportList_loc.Name:=BSDanCollectionsLbl;
+        CustomReportList_loc.ReportID:=51000;
+        CustomReportList_loc.Insert();
+        CustomReportList_loc.No:=13;
+        CustomReportList_loc.Name:=BSDanRefCollectionsLbl;
+        CustomReportList_loc.ReportID:=51001;
+        CustomReportList_loc.Insert();
+    end;
+    var TexReportingLbl: Label 'Tax Reporting 8+12';
+    DetailTrailBalanceLbl: Label 'Detrail Trial Balance';
+    GeneralJournalTestLbl: Label 'General Journal - Test';
+    PronesterInputLbl: Label 'Pronester Input';
+    TrialBalanceLbl: Label 'Trial Balance';
+    DSTRealAndExpectedExcelLbl: Label 'DST Real and Expected Excel';
+    DSTRealAndExpectedVatXLLbl: Label 'DST Real/Expected - VAT XL';
+    SalesInvoiceLbl: Label 'Sales - Invoice';
+    SalesCreditMemoLbl: Label 'Sales - Credit Memo';
+    DKSBørnehuseneLbl: Label 'DKS Børnehusene - VAT';
+    MaintainCustForGDPRLbl: Label 'Maintain Cust for GDPR';
+    BSDanCollectionsLbl: Label 'BS Dan Collections';
+    BSDanRefCollectionsLbl: Label 'BS Dan Ref. Collections';
+}
