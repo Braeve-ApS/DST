@@ -2,7 +2,7 @@
   "id": "9a843256-bc66-4869-b887-3e3d4088ef63",
   "name": "DKS Custom Extension",
   "publisher": "TRIMIT DK A/S",
-  "version": "25.0.0.20",
+  "version": "25.0.0.21",
   "runtime": "13.1",
   "target": "Cloud",
   "application": "25.0.0.0",
