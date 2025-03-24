@@ -189,4 +189,28 @@ Codeunit 51004 "DKS Check Tvungen Dimension"
             end;
         until DimensionSetEntry.Next = 0;
     end;
+
+    procedure CheckDimAndVatBusPosting(PurchaseHeader: Record "Purchase Header")
+    var
+        DSTSetup: Record "DST Setup";
+        PurchaseLine: Record "Purchase Line";
+    begin
+        if not DSTSetup.Get() then
+            exit;
+        if not DSTSetup."Use Department as VAT Bus. pos" then
+            exit;
+        if not PurchaseHeader.Invoice then
+            exit;
+
+        // testfield() vat.bus on lines against dim1 on line.
+        PurchaseLine.SetRange(PurchaseLine."Document Type", PurchaseHeader."Document Type");
+        PurchaseLine.SetRange(PurchaseLine."Document No.", PurchaseHeader."No.");
+        PurchaseLine.SetFilter("No.", '<> %1', '');
+        PurchaseLine.SetFilter("Shortcut Dimension 1 Code", '<> %1', '');
+        PurchaseLine.SetFilter("Qty. to Invoice", '<> %1', 0);
+        if PurchaseLine.FindSet() then
+            repeat
+                PurchaseLine.TestField("VAT Bus. Posting Group", PurchaseLine."Shortcut Dimension 1 Code");
+            until PurchaseLine.Next() = 0;
+    end;
 }

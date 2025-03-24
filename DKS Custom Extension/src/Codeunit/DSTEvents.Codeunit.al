@@ -228,6 +228,7 @@ codeunit 50000 "DST Events"
     local procedure CU90OnBeforePostDocument(var PurchaseHeader: Record "Purchase Header")
     var
         PurchaseLine_loc: Record "Purchase Line";
+        DKSCheckTvungenDimension: Codeunit "DKS Check Tvungen Dimension";
     begin
         //>>DKS001
         CU51004.PerformCheck(38, PurchaseHeader."No.", 0, '', '', PurchaseHeader."Document Type".AsInteger());
@@ -242,6 +243,8 @@ codeunit 50000 "DST Events"
             if PurchaseLine_loc.FindFirst() then if PurchaseLine_loc."No." <> '' then if PurchaseLine_loc.Description <> '' then PurchaseHeader."Posting Description" := PurchaseLine_loc.Description;
         end;
         //<< COR/MIN 250124
+        if PurchaseHeader.Invoice then
+            DKSCheckTvungenDimension.CheckDimAndVatBusPosting(PurchaseHeader);
     end;
 
     [EventSubscriber(Objecttype::Codeunit, 6085706, 'OnAfterModifyPurchLineCreatePurchLine', '', false, false)]
