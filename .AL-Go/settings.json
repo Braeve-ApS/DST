@@ -4,14 +4,14 @@
   "testFolders": [],
   "bcptTestFolders": [],
   "installApps": [
-    "DKS Custom Extension\\Dependencies\\BusinessFoundation 251.app",
-    "DKS Custom Extension\\Dependencies\\CM 253.app",
-    "DKS Custom Extension\\Dependencies\\ConnectorApp 251.app",
-    "DKS Custom Extension\\Dependencies\\Core 251.app",
-    "DKS Custom Extension\\Dependencies\\DC 251.app",
-    "DKS Custom Extension\\Dependencies\\DeliveryNetwork 251.app",
-    "DKS Custom Extension\\Dependencies\\EM 251.app",
-    "DKS Custom Extension\\Dependencies\\PM 252.app",
-    "DKS Custom Extension\\Dependencies\\PMDK 252.app"    
+    "DKS Custom Extension\\Dependencies\\CBF251.app",
+    "DKS Custom Extension\\Dependencies\\CM252.app",
+    "DKS Custom Extension\\Dependencies\\CCA251.app",
+    "DKS Custom Extension\\Dependencies\\Core2514.app",
+    "DKS Custom Extension\\Dependencies\\DC252.app",
+    "DKS Custom Extension\\Dependencies\\CDN252.app",
+    "DKS Custom Extension\\Dependencies\\EM252.app",
+    "DKS Custom Extension\\Dependencies\\PM254.app",
+    "DKS Custom Extension\\Dependencies\\PMDK254.app"    
   ]
 }
