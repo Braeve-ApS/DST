@@ -11,6 +11,20 @@
             "breakOnNext": "WebClient",
             "breakOnError": "ExcludeTry",
             "tenant": "a4605de2-552a-43b7-aad7-cb7838a665dc"
+        },
+        {
+            "name": "Microsoft cloud sandbox",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "Sandbox_Collection",
+            "tenant": "a4605de2-552a-43b7-aad7-cb7838a665dc",
+            "startupObjectId": 22,
+            "startupObjectType": "Page",
+            "breakOnError": "All",
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true
         }
     ]
 }
