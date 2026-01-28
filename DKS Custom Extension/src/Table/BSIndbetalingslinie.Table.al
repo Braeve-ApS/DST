@@ -1,5 +1,7 @@
 Table 51003 "BS-Indbetalingslinie"
 {
+    ObsoleteState = Removed;
+    ObsoleteReason = 'Replaced by new functionality in BetalingsService.';
     fields
     {
         field(1; "Linienr."; Integer)

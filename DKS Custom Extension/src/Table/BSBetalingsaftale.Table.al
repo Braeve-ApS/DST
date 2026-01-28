@@ -1,5 +1,7 @@
 Table 51008 "BS-Betalingsaftale"
 {
+    ObsoleteState = Removed;
+    ObsoleteReason = 'Replaced by new functionality in BetalingsService.';
     fields
     {
         field(1; "Debitornr."; Code[20])
@@ -65,27 +67,27 @@ Table 51008 "BS-Betalingsaftale"
         }
         field(5; "CPR-/CVR-Nr."; Code[10])
         {
-            trigger OnValidate()
-            var
-                BSAftale: Record "BS-Betalingsaftale";
-                lCustomer: Record Customer;
-            begin
-                if "CPR-/CVR-Nr." <> '' then begin
-                    Stamoplysninger."Validér CPR-/CVR-Nummer"("CPR-/CVR-Nr.", false, false);
-                    // Dubletkontrol {2.50.02}
-                    Stamoplysninger.Find('-');
-                    if Stamoplysninger."Dubletkontrol på CPR/CVR-Nr." then begin
-                        BSAftale.Reset;
-                        BSAftale.SetCurrentkey("CPR-/CVR-Nr.");
-                        BSAftale.SetRange("CPR-/CVR-Nr.", "CPR-/CVR-Nr.");
-                        if BSAftale.Find('=><')then Error('Der findes allerede en Betalingsaftale (Debitor ''%1'') med %2 ''%3'' !', BSAftale."Debitornr.", BSAftale.FieldName("CPR-/CVR-Nr."), BSAftale."CPR-/CVR-Nr.");
-                    end;
-                end;
-                if "CPR-/CVR-Nr." <> '' then if lCustomer.Get("Debitornr.")then begin
-                        lCustomer.Validate("Social Security No.", "CPR-/CVR-Nr.");
-                        lCustomer.Modify;
-                    end;
-            end;
+            // trigger OnValidate()
+            // var
+            //     BSAftale: Record "BS-Betalingsaftale";
+            //     lCustomer: Record Customer;
+            // begin
+            //     if "CPR-/CVR-Nr." <> '' then begin
+            //         Stamoplysninger."Validér CPR-/CVR-Nummer"("CPR-/CVR-Nr.", false, false);
+            //         // Dubletkontrol {2.50.02}
+            //         Stamoplysninger.Find('-');
+            //         if Stamoplysninger."Dubletkontrol på CPR/CVR-Nr." then begin
+            //             BSAftale.Reset;
+            //             BSAftale.SetCurrentkey("CPR-/CVR-Nr.");
+            //             BSAftale.SetRange("CPR-/CVR-Nr.", "CPR-/CVR-Nr.");
+            //             if BSAftale.Find('=><')then Error('Der findes allerede en Betalingsaftale (Debitor ''%1'') med %2 ''%3'' !', BSAftale."Debitornr.", BSAftale.FieldName("CPR-/CVR-Nr."), BSAftale."CPR-/CVR-Nr.");
+            //         end;
+            //     end;
+            //     if "CPR-/CVR-Nr." <> '' then if lCustomer.Get("Debitornr.")then begin
+            //             lCustomer.Validate("Social Security No.", "CPR-/CVR-Nr.");
+            //             lCustomer.Modify;
+            //         end;
+            // end;
         }
         field(10; Bankkonto; Code[10])
         {

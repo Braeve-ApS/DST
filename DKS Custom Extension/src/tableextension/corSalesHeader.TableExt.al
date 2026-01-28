@@ -9,7 +9,7 @@ tableextension 50002 "cor Sales Header" extends "Sales Header"
         field(51000; "Tilh. BS-Opkrævning"; Code[9]) // BS - Angiver evt. tilh¢rende BS-Opkrævning)
         {
             Caption = 'Tilh. BS-Opkrævning';
-            TableRelation = "BS-Opkrævningshoved"."Opkrævningsnr.";
+            // TableRelation = "BS-Opkrævningshoved"."Opkrævningsnr.";
         }
     }
 }

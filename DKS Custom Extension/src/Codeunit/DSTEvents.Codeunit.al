@@ -32,20 +32,20 @@ codeunit 50000 "DST Events"
         if HelpText <> '' then Message('OBS! Felterne %1\' + 'er længere end 35 karakterer.\' + 'Hvis debitor skal opkræves via PBS er max-længden 35 karakterer!', HelpText);
     end;
 
-    [EventSubscriber(ObjectType::Table, Database::Customer, 'OnAfterDeleteEvent', '', false, false)]
-    local procedure T18OnDeleteLast(var Rec: Record Customer; RunTrigger: Boolean)
-    var
-        "BS-Aftale": Record "BS-Betalingsaftale";
-    begin
-        //Copied From T18 On Delete in NAV 4.0
-        // >> BetalingsService 1.03 >>
-        "BS-Aftale".Reset();
-        "BS-Aftale".SetRange("Debitornr.", Rec."No.");
-        while "BS-Aftale".Find('-') do begin
-            "BS-Aftale".Delete(true);
-        end;
-        // << BetalingsService <<
-    end;
+    // [EventSubscriber(ObjectType::Table, Database::Customer, 'OnAfterDeleteEvent', '', false, false)]
+    // local procedure T18OnDeleteLast(var Rec: Record Customer; RunTrigger: Boolean)
+    // var
+    //     "BS-Aftale": Record "BS-Betalingsaftale";
+    // begin
+    //     //Copied From T18 On Delete in NAV 4.0
+    //     // >> BetalingsService 1.03 >>
+    //     "BS-Aftale".Reset();
+    //     "BS-Aftale".SetRange("Debitornr.", Rec."No.");
+    //     while "BS-Aftale".Find('-') do begin
+    //         "BS-Aftale".Delete(true);
+    //     end;
+    //     // << BetalingsService <<
+    // end;
 
     [EventSubscriber(ObjectType::Table, Database::Customer, 'OnAfterValidateEvent', 'Social Security No.', false, false)]
     local procedure T18_SocialSecurityNo_OnAfterValidate(var Rec: Record Customer; var xRec: Record Customer; CurrFieldNo: Integer)

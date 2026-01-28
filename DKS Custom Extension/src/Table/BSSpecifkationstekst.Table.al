@@ -1,5 +1,7 @@
 Table 51001 "BS-Specifkationstekst"
 {
+    ObsoleteState = Removed;
+    ObsoleteReason = 'Replaced by new functionality in BetalingsService.';
     fields
     {
         field(1; "Debitornr."; Code[20])

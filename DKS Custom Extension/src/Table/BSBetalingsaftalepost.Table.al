@@ -1,5 +1,7 @@
 Table 51011 "BS-Betalingsaftalepost"
 {
+    ObsoleteState = Removed;
+    ObsoleteReason = 'Replaced by new functionality in BetalingsService.';
     // // BetalingsService -------------------------------------- >>
     // // ˆ Copyright 1997, 2001 Hands A/S
     PasteIsValid = false;

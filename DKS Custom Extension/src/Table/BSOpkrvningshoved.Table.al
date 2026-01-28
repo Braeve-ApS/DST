@@ -1,5 +1,7 @@
 Table 51009 "BS-Opkrævningshoved"
 {
+    ObsoleteState = Removed;
+    ObsoleteReason = 'Replaced by new functionality in BetalingsService.';
     // 
     // // BetalingsService -------------------------------------- >>
     // // ˆ Copyright 1997, 2001 Hands A/S
@@ -284,7 +286,7 @@ Table 51009 "BS-Opkrævningshoved"
     procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
         DimMgt.ValidateDimValueCode(FieldNumber, ShortcutDimCode);
-        DimMgt.SaveDefaultDim(Database::"BS-Opkrævningshoved", "Opkrævningsnr.", FieldNumber, ShortcutDimCode);
+        // DimMgt.SaveDefaultDim(Database::"BS-Opkrævningshoved", "Opkrævningsnr.", FieldNumber, ShortcutDimCode);
         Modify;
     end;
 }
