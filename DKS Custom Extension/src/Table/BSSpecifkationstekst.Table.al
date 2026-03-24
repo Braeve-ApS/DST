@@ -1,7 +1,7 @@
 Table 51001 "BS-Specifkationstekst"
 {
-    ObsoleteState = Removed;
-    ObsoleteReason = 'Replaced by new functionality in BetalingsService.';
+    ObsoleteState = Pending;
+    ObsoleteReason = 'Replaced by standard BC Subscription Billing. Will be removed in a future version.';
     fields
     {
         field(1; "Debitornr."; Code[20])

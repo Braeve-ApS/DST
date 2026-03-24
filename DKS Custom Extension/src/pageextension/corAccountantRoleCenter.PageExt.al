@@ -63,18 +63,6 @@ pageextension 50014 "cor Accountant Role Center" extends "Accountant Role Center
                         ApplicationArea = Basic, Suite;
                         RunObject = Page "Pronestor Indlæsning";
                     }
-                    // action("BS Opkrævningsoversigt")
-                    // {
-                    //     Caption = 'BS Opkrævningsoversigt';
-                    //     ApplicationArea = Basic, Suite;
-                    //     RunObject = Page 51028;
-                    // }
-                    // action("BS Opkrævning")
-                    // {
-                    //     Caption = 'BS Opkrævning';
-                    //     ApplicationArea = Basic, Suite;
-                    //     RunObject = Page 50043;
-                    // }
                     action("DST Opsætning")
                     {
                         Caption = 'DST Opsætning';
@@ -134,12 +122,6 @@ pageextension 50014 "cor Accountant Role Center" extends "Accountant Role Center
                         ApplicationArea = Basic, Suite;
                         RunObject = Report 50060;
                     }
-                    // action("BS Dan opkrævninger")
-                    // {
-                    //     Caption = 'BS Dan opkrævninger';
-                    //     ApplicationArea = Basic, Suite;
-                    //     RunObject = Report 51000;
-                    // }
                 }
                 group(Codeunits)
                 {
@@ -151,12 +133,6 @@ pageextension 50014 "cor Accountant Role Center" extends "Accountant Role Center
                         ApplicationArea = Basic, Suite;
                         RunObject = Codeunit 50001;
                     }
-                    // action("Bogfør opkrævninger")
-                    // {
-                    //     Caption = 'Bogfør opkrævninger';
-                    //     ApplicationArea = Basic, Suite;
-                    //     RunObject = Codeunit 51030;
-                    // }
                     group(XMLPorts)
                     {
                         Caption = 'XML Porte';

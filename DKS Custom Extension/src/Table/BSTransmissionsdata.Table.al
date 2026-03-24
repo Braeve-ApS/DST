@@ -1,7 +1,7 @@
 Table 51006 "BS-Transmissionsdata"
 {
-    ObsoleteState = Removed;
-    ObsoleteReason = 'Replaced by new functionality in BetalingsService.';
+    ObsoleteState = Pending;
+    ObsoleteReason = 'Replaced by standard BC Subscription Billing. Will be removed in a future version.';
     // // BetalingsService -------------------------------------- >>
     // // ˆ Copyright 1997, 2001 Hands A/S
     // DrillDownPageID = UnknownPage51011;

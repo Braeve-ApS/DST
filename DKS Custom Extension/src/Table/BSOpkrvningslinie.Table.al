@@ -1,7 +1,7 @@
 Table 51010 "BS-Opkrævningslinie"
 {
-    ObsoleteState = Removed;
-    ObsoleteReason = 'Replaced by new functionality in BetalingsService.';
+    ObsoleteState = Pending;
+    ObsoleteReason = 'Replaced by standard BC Subscription Billing. Will be removed in a future version.';
     // 
     // 
     // // BetalingsService -------------------------------------- >>
@@ -13,7 +13,6 @@ Table 51010 "BS-Opkrævningslinie"
     // 
     // COR/MIN 081013 Huske den valgte afd. og akt. kode. Samt funktionskode og trading partner
     // COR/MIN 301013 Tilføje nyt sumideksfelt til primærnøgle: tihøre beløb incl. moms
-    // DrillDownPageID = "BS OpkrævningsLinier";
     PasteIsValid = false;
 
     fields

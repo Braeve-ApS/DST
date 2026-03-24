@@ -6,10 +6,11 @@ tableextension 50004 "cor Sales Invoice Header" extends "Sales Invoice Header"
         {
             Caption = 'E-fak Note';
         }
-        field(51000; "Tilh. BS-Opkrævning"; Code[9]) // BS - Angiver evt. tilh¢rende BS-Opkrævning)
+        field(51000; "Tilh. BS-Opkrævning"; Code[9])
         {
             Caption = 'Tilh. BS-Opkrævning';
-            // TableRelation = "BS-Opkrævningshoved"."Opkrævningsnr.";
+            ObsoleteState = Pending;
+            ObsoleteReason = 'Replaced by standard BC Subscription Billing. Will be removed in a future version.';
         }
     }
 }
