@@ -12,6 +12,7 @@
     "DKS Custom Extension\\Dependencies\\CDN252.app",
     "DKS Custom Extension\\Dependencies\\EM252.app",
     "DKS Custom Extension\\Dependencies\\PM254.app",
-    "DKS Custom Extension\\Dependencies\\PMDK254.app"    
-  ]
+    "DKS Custom Extension\\Dependencies\\PMDK254.app"
+  ],
+  "repoVersion": "1.1"
 }
