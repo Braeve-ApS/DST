@@ -1,5 +1,7 @@
 Table 51004 "BS-Ajourføringslinie"
 {
+    ObsoleteState = Pending;
+    ObsoleteReason = 'Replaced by standard BC Subscription Billing. Will be removed in a future version.';
     fields
     {
         field(2; "Linienr."; Integer)
@@ -18,20 +20,6 @@ Table 51004 "BS-Ajourføringslinie"
         {
             TableRelation = Customer;
 
-            trigger OnValidate()
-            begin
-                if "Debitornr." = '' then begin
-                    Clear("Debitorgr.");
-                end
-                else
-                begin
-                    Betalingsaftale.Reset;
-                    Betalingsaftale.SetRange("Debitornr.", "Debitornr.");
-                    if Page.RunModal(Page::"BS Betalingsaftale", Betalingsaftale) = Action::LookupOK then "Debitorgr.":=Betalingsaftale."Debitorgr."
-                    else
-                        Message('%1 skal indtastes manuelt', Betalingsaftale.FieldName("Debitorgr."));
-                end;
-            end;
         }
         field(12; "Debitorgr."; Integer)
         {
@@ -60,7 +48,6 @@ Table 51004 "BS-Ajourføringslinie"
         field(95; Rettelsesreference; Integer)
         {
             Description = 'Udfyldes ved rettelser for at undgå fejl ifm. tilmelding af en "aktiv" aftale';
-            TableRelation = "BS-Ajourføringslinie";
         }
     }
     keys

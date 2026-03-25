@@ -1,5 +1,7 @@
 Table 51009 "BS-Opkrævningshoved"
 {
+    ObsoleteState = Pending;
+    ObsoleteReason = 'Replaced by standard BC Subscription Billing. Will be removed in a future version.';
     // 
     // // BetalingsService -------------------------------------- >>
     // // ˆ Copyright 1997, 2001 Hands A/S
